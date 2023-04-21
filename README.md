@@ -2,7 +2,7 @@
 
 ### This is a frontend web app I am currently building with Vue.js to allow the user to track their stocks. I plan to build this into a full-stack MEVN app.
 
-## Installation
+## 1. Installation
 
 _Clone this repo and run the following commands in your terminal._
 
@@ -18,7 +18,7 @@ npm run serve
 npm run build
 ```
 
-## 3. Functionality
+## 2. Functionality
 
 Currently, users can:
 
@@ -31,7 +31,7 @@ Full functionality will allow users to:
 - View their current portfolio, including the value of each stock and total value of the portfolio
 - Receive alerts when there is a significant change in the stock market or in the value of their portfolio
 
-## 4. Tools and Technologies
+## 3. Tools and Technologies
 
 - Vue.js
 - JavaScript
