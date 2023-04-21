@@ -1,4 +1,5 @@
 import HomePage from "../src/components/HomePage";
+import SearchBar from "../src/components/SearchBar";
 
 describe("HomePage", () => {
   let props;
@@ -60,6 +61,17 @@ describe("HomePage", () => {
         stock.change
       );
     });
+  });
+
+  it("updates the table when the search query changes", () => {
+    cy.get(".search-bar input").type("AAPL");
+
+    cy.get("table tbody tr").should("have.length", 1);
+    cy.get("table tbody tr td:nth-child(1)").should("contain", "Apple Inc.");
+
+    cy.get(".search-bar input").clear().type("xyz");
+
+    cy.get("table tbody tr").should("have.length", 0);
   });
 });
 
