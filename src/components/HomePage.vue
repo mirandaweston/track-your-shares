@@ -1,6 +1,7 @@
 <template>
   <div class="home-page">
     <h1>Stocks</h1>
+    <search-bar :value="searchQuery" @update="searchQuery = $event" />
     <table>
       <thead>
         <tr>
@@ -11,7 +12,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="stock in stocks" :key="stock.ticker">
+        <tr v-for="stock in filteredStocks" :key="stock.ticker">
           <td>{{ stock.name }}</td>
           <td>{{ stock.ticker }}</td>
           <td>{{ stock.price }}</td>
@@ -23,9 +24,15 @@
 </template>
 
 <script>
+import SearchBar from "../components/SearchBar.vue";
+
 export default {
+  components: {
+    SearchBar,
+  },
   data() {
     return {
+      searchQuery: "",
       stocks: [
         { name: "Apple Inc.", ticker: "AAPL", price: 135.75, change: -0.25 },
         {
@@ -49,6 +56,17 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    filteredStocks() {
+      return this.stocks.filter((stock) => {
+        const query = this.searchQuery.toLowerCase();
+        return (
+          stock.name.toLowerCase().includes(query) ||
+          stock.ticker.toLowerCase().includes(query)
+        );
+      });
+    },
   },
 };
 </script>
