@@ -73,6 +73,10 @@ describe("HomePage", () => {
 
     cy.get("table tbody tr").should("have.length", 0);
   });
+
+  it("displays a 'Create portfolio' button", () => {
+    cy.get(".create").should("exist");
+  });
 });
 
 const stocks = [

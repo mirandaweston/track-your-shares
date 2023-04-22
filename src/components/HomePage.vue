@@ -1,7 +1,12 @@
 <template>
   <div class="home-page">
     <h1>Stocks</h1>
-    <search-bar :value="searchQuery" @update="searchQuery = $event" />
+    <div class="search-bar">
+      <search-bar :value="searchQuery" @update="searchQuery = $event" />
+    </div>
+    <div class="create">
+      <button @click="createPortfolio">Create portfolio</button>
+    </div>
     <table>
       <thead>
         <tr>
@@ -90,6 +95,16 @@ td {
 
 th {
   background-color: #eee;
+}
+
+.create {
+  text-align: right;
+  padding: 10px;
+}
+
+.search-bar {
+  text-align: left;
+  margin-bottom: -32px;
 }
 
 tr:hover {
