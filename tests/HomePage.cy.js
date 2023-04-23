@@ -1,5 +1,4 @@
 import HomePage from "../src/components/HomePage";
-import SearchBar from "../src/components/SearchBar";
 
 describe("HomePage", () => {
   let props;
