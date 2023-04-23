@@ -8,6 +8,7 @@
     />
   </div>
 </template>
+
 <script>
 export default {
   props: {
@@ -32,12 +33,6 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.search-bar {
-  margin-bottom: 1rem;
-}
-</style>
 
 <style scoped>
 .search-bar {
