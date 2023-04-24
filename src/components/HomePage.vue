@@ -14,6 +14,7 @@
           <th>Ticker</th>
           <th>Price</th>
           <th>Change</th>
+          <th>Add to portfolio</th>
         </tr>
       </thead>
       <tbody>
@@ -22,24 +23,32 @@
           <td>{{ stock.ticker }}</td>
           <td>{{ stock.price }}</td>
           <td>{{ stock.change }}</td>
+          <td><button @click="addToPortfolio(stock)">Add</button></td>
         </tr>
       </tbody>
     </table>
+    <my-portfolios
+      v-if="portfolioStocks.length"
+      :portfolio-name="portfolioName"
+      :portfolio-stocks="portfolioStocks"
+    />
   </div>
 </template>
 
 <script>
 import SearchBar from "../components/SearchBar.vue";
-import CreatePortfolio from "../components/CreatePortfolio.vue";
+import MyPortfolios from "../components/MyPortfolios.vue";
 
 export default {
   components: {
     SearchBar,
-    CreatePortolio,
+    MyPortfolios,
   },
   data() {
     return {
       searchQuery: "",
+      portfolioName: "",
+      portfolioStocks: [],
       stocks: [
         { name: "Apple Inc.", ticker: "AAPL", price: 135.75, change: -0.25 },
         {
@@ -73,6 +82,15 @@ export default {
           stock.ticker.toLowerCase().includes(query)
         );
       });
+    },
+  },
+  methods: {
+    createPortfolio() {
+      this.portfolioName = prompt("Enter the name of the portfolio:");
+      this.portfolioStocks = [];
+    },
+    addToPortfolio(stock) {
+      this.portfolioStocks.push(stock);
     },
   },
 };
