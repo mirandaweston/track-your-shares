@@ -9,6 +9,7 @@
         <th>Name</th>
         <th>Ticker</th>
         <th>Price</th>
+        <th>Investment</th>
         <th>Change</th>
       </tr>
     </thead>
@@ -17,6 +18,7 @@
         <td>{{ stock.name }}</td>
         <td>{{ stock.ticker }}</td>
         <td>{{ stock.price }}</td>
+        <td>{{ stock.price * stock.share }}</td>
         <td>{{ stock.change }}</td>
       </tr>
     </tbody>
