@@ -4,7 +4,7 @@
     <div class="search-bar">
       <search-bar :value="searchQuery" @update="searchQuery = $event" />
     </div>
-    <div class="create">
+    <div class="create-portfolio">
       <button @click="createPortfolio">Create portfolio</button>
     </div>
     <table>
@@ -97,7 +97,7 @@ th {
   background-color: #eee;
 }
 
-.create {
+.create-portfolio {
   text-align: right;
   padding: 10px;
 }
