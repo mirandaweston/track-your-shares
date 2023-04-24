@@ -30,10 +30,12 @@
 
 <script>
 import SearchBar from "../components/SearchBar.vue";
+import CreatePortfolio from "../components/CreatePortfolio.vue";
 
 export default {
   components: {
     SearchBar,
+    CreatePortolio,
   },
   data() {
     return {
