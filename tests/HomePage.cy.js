@@ -74,7 +74,7 @@ describe("HomePage", () => {
   });
 
   it("displays a 'Create portfolio' button", () => {
-    cy.get(".create").should("exist");
+    cy.get(".create-portfolio").should("exist");
   });
 });
 
