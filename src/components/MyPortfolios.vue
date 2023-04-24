@@ -12,6 +12,14 @@
         <th>Change</th>
       </tr>
     </thead>
+    <tbody>
+      <tr v-for="stock in portfolioStocks" :key="stock.ticker">
+        <td>{{ stock.name }}</td>
+        <td>{{ stock.ticker }}</td>
+        <td>{{ stock.price }}</td>
+        <td>{{ stock.change }}</td>
+      </tr>
+    </tbody>
   </table>
 </template>
 

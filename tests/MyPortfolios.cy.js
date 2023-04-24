@@ -22,4 +22,12 @@ describe("MyPortfolios", () => {
     cy.get("table th").should("contain", "Price");
     cy.get("table th").should("contain", "Change");
   });
+
+  it("displays new portfolio", () => {
+    cy.get("table tbody tr").should("have.length", 1);
+    cy.get("table td").should("contain", "Apple Inc.");
+    cy.get("table td").should("contain", "AAPL");
+    cy.get("table td").should("contain", "145.12");
+    cy.get("table td").should("contain", "1.2");
+  });
 });
