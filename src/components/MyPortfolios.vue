@@ -3,6 +3,16 @@
   <div v-if="portfolioStocks.length">
     <h2 style="text-align: left">{{ portfolioName }}</h2>
   </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Ticker</th>
+        <th>Price</th>
+        <th>Change</th>
+      </tr>
+    </thead>
+  </table>
 </template>
 
 <script>
@@ -20,4 +30,20 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #eee;
+}
+</style>

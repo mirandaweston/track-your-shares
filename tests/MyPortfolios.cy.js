@@ -5,11 +5,21 @@ describe("MyPortfolios", () => {
     cy.mount(MyPortfolios, {
       props: {
         portfolioName: "My new portfolio",
+        portfolioStocks: [
+          { name: "Apple Inc.", ticker: "AAPL", price: 145.12, change: 1.2 },
+        ],
       },
     });
   });
 
   it("displays name of new portfolio", () => {
     cy.get("div h2").should("contain", "My new portfolio");
+  });
+
+  it("displays all headings", () => {
+    cy.get("table th").should("contain", "Name");
+    cy.get("table th").should("contain", "Ticker");
+    cy.get("table th").should("contain", "Price");
+    cy.get("table th").should("contain", "Change");
   });
 });
