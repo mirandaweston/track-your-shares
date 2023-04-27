@@ -10,6 +10,7 @@
         <th>Ticker</th>
         <th>Price</th>
         <th>Investment</th>
+        <th>Share</th>
         <th>Change</th>
       </tr>
     </thead>
@@ -18,7 +19,8 @@
         <td>{{ stock.name }}</td>
         <td>{{ stock.ticker }}</td>
         <td>{{ stock.price }}</td>
-        <td>{{ stock.price * stock.share }}</td>
+        <td>{{ stock.investment }}</td>
+        <td>{{ (stock.price / stock.investment).toFixed(2) }}</td>
         <td>{{ stock.change }}</td>
       </tr>
     </tbody>
