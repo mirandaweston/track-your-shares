@@ -12,6 +12,9 @@ export default {
   components: {
     HomePage,
   },
+  mounted() {
+    document.title = "Stock Tracker";
+  },
 };
 </script>
 
