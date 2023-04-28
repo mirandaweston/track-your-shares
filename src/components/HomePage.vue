@@ -14,7 +14,7 @@
           <th>Ticker</th>
           <th>Price</th>
           <th>Change</th>
-          <th>Add to portfolio</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -23,7 +23,11 @@
           <td>{{ stock.ticker }}</td>
           <td>{{ stock.price }}</td>
           <td>{{ stock.change }}</td>
-          <td><button @click="addToPortfolio(stock)">Add</button></td>
+          <td>
+            <div class="add">
+              <button>Add to portfolio</button>
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -88,9 +92,6 @@ export default {
     createPortfolio() {
       this.portfolioName = prompt("Enter the name of the portfolio:");
       this.portfolioStocks = [];
-    },
-    addToPortfolio(stock) {
-      this.portfolioStocks.push(stock);
     },
   },
 };

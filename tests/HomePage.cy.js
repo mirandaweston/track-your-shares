@@ -27,6 +27,8 @@ describe("HomePage", () => {
           change: -0.75,
         },
       ],
+      showModal: false,
+      newPortfolioName: "",
     };
 
     cy.mount(HomePage, { props });
@@ -75,6 +77,10 @@ describe("HomePage", () => {
 
   it("displays a 'Create portfolio' button", () => {
     cy.get(".create-portfolio").should("exist");
+  });
+
+  it("displays an 'Add to portfolio' to allow user to add stock", () => {
+    cy.get(".add").should("exist");
   });
 });
 
