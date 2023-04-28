@@ -25,7 +25,7 @@
           <td>{{ stock.change }}</td>
           <td>
             <div class="add">
-              <button>Add to portfolio</button>
+              <button @click="addToPortfolio(stock)">Add to portfolio</button>
             </div>
           </td>
         </tr>
@@ -44,6 +44,7 @@ import SearchBar from "../components/SearchBar.vue";
 import MyPortfolios from "../components/MyPortfolios.vue";
 
 export default {
+  name: "HomePage",
   components: {
     SearchBar,
     MyPortfolios,
@@ -92,6 +93,19 @@ export default {
     createPortfolio() {
       this.portfolioName = prompt("Enter the name of the portfolio:");
       this.portfolioStocks = [];
+    },
+    addToPortfolio(stock) {
+      const shareInvestment = prompt("Enter amount to invest:");
+      const investment = parseFloat(shareInvestment);
+      if (isNaN(investment) || investment <= 0) {
+        alert("Invalid input. Please enter a positive number.");
+        return;
+      }
+      const stockWithInvestment = {
+        ...stock,
+        investment,
+      };
+      this.portfolioStocks.push(stockWithInvestment);
     },
   },
 };

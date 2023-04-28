@@ -79,8 +79,9 @@ describe("HomePage", () => {
     cy.get(".create-portfolio").should("exist");
   });
 
-  it("displays an 'Add to portfolio' to allow user to add stock", () => {
+  it("displays an 'Add to portfolio' button to allow user to add stock", () => {
     cy.get(".add").should("exist");
+    cy.get(".add button").eq(0).click();
   });
 });
 
