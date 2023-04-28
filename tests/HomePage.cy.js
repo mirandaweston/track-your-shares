@@ -83,6 +83,14 @@ describe("HomePage", () => {
     cy.get(".add").should("exist");
     cy.get(".add button").eq(0).click();
   });
+
+  it("alerts user to create a portfolio", () => {
+    cy.on("window:alert", (message) => {
+      expect(message).to.equal("Please first create a portfolio");
+    });
+
+    cy.get(".add button").eq(0).click();
+  });
 });
 
 const stocks = [

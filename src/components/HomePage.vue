@@ -95,6 +95,10 @@ export default {
       this.portfolioStocks = [];
     },
     addToPortfolio(stock) {
+      if (!this.portfolioName) {
+        alert("Please first create a portfolio");
+        return;
+      }
       const shareInvestment = prompt("Enter amount to invest:");
       const investment = parseFloat(shareInvestment);
       if (isNaN(investment) || investment <= 0) {
