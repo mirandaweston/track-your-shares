@@ -24,10 +24,10 @@ Currently, users can:
 
 - View their stocks in a table on the home page
 - Search their stocks in an autocomplete search bar
+- Create a new portfolio by selecting stocks and entering the amount to invest in each one
 
 Full functionality will allow users to:
 
-- Create a new portfolio by selecting stocks and entering the amount to invest in each one
 - View their current portfolio, including the value of each stock and total value of the portfolio
 - Receive alerts when there is a significant change in the stock market or in the value of their portfolio
 
