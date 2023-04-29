@@ -80,7 +80,7 @@ describe("HomePage", () => {
   });
 
   it("displays an 'Add to portfolio' button to allow user to add stock", () => {
-    cy.get(".add").should("exist");
+    cy.get(".add button").should("exist");
     cy.get(".add button").eq(0).click();
   });
 

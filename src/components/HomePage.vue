@@ -24,7 +24,7 @@
           <td>{{ stock.price }}</td>
           <td>{{ stock.change }}</td>
           <td>
-            <div class="add">
+            <div class="add button">
               <button @click="addToPortfolio(stock)">Add to portfolio</button>
             </div>
           </td>
