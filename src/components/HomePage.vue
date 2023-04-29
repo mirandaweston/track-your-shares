@@ -93,6 +93,7 @@ export default {
     createPortfolio() {
       this.portfolioName = prompt("Enter the name of the portfolio:");
       this.portfolioStocks = [];
+      alert("Created! Now you can start adding to " + this.portfolioName);
     },
     addToPortfolio(stock) {
       if (!this.portfolioName) {

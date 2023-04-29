@@ -79,6 +79,14 @@ describe("HomePage", () => {
     cy.get(".create-portfolio").should("exist");
   });
 
+  it("confirms creation of portfolio", () => {
+    const newPortfolio = "My Portfolio";
+    cy.get(".create-portfolio button").click().type(newPortfolio);
+    cy.on("window:alert", (message) => {
+      expect(message).to.equal("Created! Now you can start adding to null");
+    });
+  });
+
   it("displays an 'Add to portfolio' button to allow user to add stock", () => {
     cy.get(".add button").should("exist");
     cy.get(".add button").eq(0).click();
