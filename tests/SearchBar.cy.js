@@ -6,7 +6,11 @@ describe("SearchBar", () => {
   });
 
   it("renders a search input bar with given placeholder", () => {
-    cy.get(".search-bar input").should("have.attr", "placeholder", "Search");
+    cy.get(".search-bar input").should(
+      "have.attr",
+      "placeholder",
+      "Search by name"
+    );
   });
 
   it("updates input value with user input", () => {

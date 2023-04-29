@@ -4,7 +4,7 @@
       type="text"
       :value="searchQuery"
       @input="$emit('update', $event.target.value)"
-      placeholder="Search"
+      placeholder="Search by name"
     />
   </div>
 </template>
