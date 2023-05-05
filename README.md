@@ -1,6 +1,6 @@
 # Stock Portfolio Tracker
 
-### This is a frontend web app I am currently building with Vue.js to allow the user to track their stocks. I plan to build this into a full-stack MEVN app.
+### This is a frontend web app I am currently building with Vue.js to allow users to track their stocks. I plan to build this into a full-stack MEVN app.
 
 ## 1. Installation
 
