@@ -91,7 +91,7 @@ export default {
   },
   methods: {
     createPortfolio() {
-      this.portfolioName = prompt("Enter the name of the portfolio:");
+      this.portfolioName = prompt("Please enter the name of the portfolio:");
       this.portfolioStocks = [];
       alert("Created! Now you can start adding to " + this.portfolioName);
     },
@@ -100,7 +100,7 @@ export default {
         alert("Please first create a portfolio");
         return;
       }
-      const shareInvestment = prompt("Enter amount to invest:");
+      const shareInvestment = prompt("Please enter amount to invest:");
       const investment = parseFloat(shareInvestment);
       if (isNaN(investment) || investment <= 0) {
         alert("Invalid input. Please enter a positive number.");
