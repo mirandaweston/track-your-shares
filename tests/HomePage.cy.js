@@ -35,7 +35,7 @@ describe("HomePage", () => {
   });
 
   it("displays all headings", () => {
-    cy.get("h1").should("contain", "Stocks");
+    cy.get("h1").should("contain", "Stock Portfolio Tracker");
     cy.get("table th").should("contain", "Company");
     cy.get("table th").should("contain", "Ticker");
     cy.get("table th").should("contain", "Price");

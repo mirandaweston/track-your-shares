@@ -1,6 +1,6 @@
 <template>
   <div class="home-page">
-    <h1>Stocks</h1>
+    <h1>Stock Portfolio Tracker</h1>
     <div class="search-bar">
       <search-bar :value="searchQuery" @update="searchQuery = $event" />
     </div>
