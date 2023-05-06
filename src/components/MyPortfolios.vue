@@ -9,7 +9,7 @@
         <th>Name</th>
         <th>Ticker</th>
         <th>Price</th>
-        <th>Investment</th>
+        <th>Investment (£)</th>
         <th>Share</th>
         <th>Change</th>
       </tr>
