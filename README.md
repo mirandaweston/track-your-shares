@@ -22,13 +22,13 @@ npm run build
 
 Currently, users can:
 
-- View their stocks in a table on the home page
-- Search their stocks in an autocomplete search bar
+- View stocks in a table on the home page
+- Search stocks in an autocomplete search bar
 - Create a new portfolio by selecting stocks and entering the amount to invest in each one
 
 Full functionality will allow users to:
 
-- View their current portfolio, including the value of each stock and total value of the portfolio
+- View their portfolio, including the amount invested and share
 - Receive alerts when there is a significant change in the stock market or in the value of their portfolio
 
 ## 3. Tools and Technologies
