@@ -40,7 +40,7 @@ describe("MyPortfolios", () => {
   });
 
   it("displays all headings", () => {
-    cy.get("table th").should("contain", "Name");
+    cy.get("table th").should("contain", "Company");
     cy.get("table th").should("contain", "Ticker");
     cy.get("table th").should("contain", "Price");
     cy.get("table th").should("contain", "Investment");

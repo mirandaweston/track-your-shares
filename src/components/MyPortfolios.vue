@@ -6,7 +6,7 @@
   <table>
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Company</th>
         <th>Ticker</th>
         <th>Price</th>
         <th>Investment (£)</th>
