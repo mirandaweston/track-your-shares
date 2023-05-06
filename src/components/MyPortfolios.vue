@@ -10,7 +10,7 @@
         <th>Ticker</th>
         <th>Price</th>
         <th>Investment (£)</th>
-        <th>Share</th>
+        <th>Shares</th>
         <th>Change</th>
       </tr>
     </thead>

@@ -44,6 +44,7 @@ describe("MyPortfolios", () => {
     cy.get("table th").should("contain", "Ticker");
     cy.get("table th").should("contain", "Price");
     cy.get("table th").should("contain", "Investment");
+    cy.get("table th").should("contain", "Shares");
     cy.get("table th").should("contain", "Change");
   });
 
