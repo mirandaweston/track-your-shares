@@ -20,7 +20,7 @@ npm run build
 
 ## 2. Functionality
 
-Currently, users can:
+Users can:
 
 - View stocks in a table on the home page
 - Search stocks in an autocomplete search bar
